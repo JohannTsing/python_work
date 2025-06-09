@@ -6,11 +6,11 @@ from email.mime.application import MIMEApplication  # 用于附件
 from email.header import Header # 处理中文标题/附件名
 
 # 配置参数
-SMTP_SERVER = "smtp.qiye.aliyun.com"  # 阿里企业邮箱SMTP服务器
+SMTP_SERVER = ""  # SMTP服务器
 PORT = 465  # SSL加密端口
-SENDER_EMAIL = "zhaoyuhang@xiangyulife.com"  # 发件邮箱
-SENDER_PASSWORD = "TCqdeeKNPFMrX4n6"  # 邮箱授权码
-RECEIVER_EMAIL = "yhzhaohy@hotmail.com"  # 收件邮箱
+SENDER_EMAIL = ""  # 发件邮箱
+SENDER_PASSWORD = ""  # 邮箱授权码
+RECEIVER_EMAIL = ""  # 收件邮箱
 
 def send_text():
     replace_text = "2025-06-06 中信银行"

@@ -65,7 +65,7 @@ print(johann)
 
 
 # 实参变为可选，其实就是给形参设置默认值
-def get_formatted_name(first_name, last_name, middle_name=''):
+def get_formatted_name1(first_name, last_name, middle_name=''):
     """返回整洁的姓名。"""
     # Python将非空字符串解读为True
     if middle_name:
@@ -78,7 +78,7 @@ def get_formatted_name(first_name, last_name, middle_name=''):
 musician = get_formatted_name('jimi', 'hendrix')
 print(musician)
 
-musician = get_formatted_name('john', 'hooker', 'lee')
+musician = get_formatted_name1('john', 'hooker', 'lee')
 print(musician)
 
 
@@ -168,15 +168,15 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 # 结合使用位置实参和任意数量实参
 # XXX: 如果要让函数接受不同类型的实参，必须在函数定义中将接纳任意数量实参的形参放在最后。
 # Python先匹配位置实参和关键字实参，再将余下的实参都收集到最后一个形参中。
-def make_pizza(size, *toppings):
+def make_pizza1(size, *toppings):
     """概述要制作的比萨。"""
     print(f"\nMaking a {size}-inch pizza with the following toppings:")
     for topping in toppings:
         print(f"- {topping}")
 
 
-make_pizza(16, 'pepperoni')
-make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+make_pizza1(16, 'pepperoni')
+make_pizza1(12, 'mushrooms', 'green peppers', 'extra cheese')
 
 
 # 使用任意数量的关键字实参

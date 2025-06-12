@@ -33,9 +33,9 @@ def send_mime():
     replace_text = "2025-06-06 中信银行"
     # 初始化多部分邮件（支持文本+HTML+附件）
     msg = MIMEMultipart()
-    msg["From"] = Header(SENDER_EMAIL, "utf-8")
-    msg["To"] = Header(RECEIVER_EMAIL, "utf-8")
-    msg["Subject"] = Header(f"{replace_text} 数据下载成功", "utf-8")
+    msg["From"] = Header(SENDER_EMAIL, "utf-8").encode()
+    msg["To"] = Header(RECEIVER_EMAIL, "utf-8").encode()
+    msg["Subject"] = Header(f"{replace_text} 数据下载成功", "utf-8").encode()
 
     
     # 添加HTML正文（优先显示HTML，若客户端不支持则显示纯文本）

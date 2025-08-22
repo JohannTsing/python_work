@@ -1,26 +1,31 @@
 ANALYST_CONFIG = {
-    "aswath_damodaran": {
-        "display_name": "Aswath Damodaran",
-        "agent_func": "aswath_damodaran_agent",
-        "order": 0,
-    },
     "ben_graham": {
         "display_name": "Ben Graham",
         "agent_func": "ben_graham_agent",
         "order": 1,
     },
+    "aswath_damodaran": {
+        "display_name": "Aswath Damodaran",
+        "agent_func": "aswath_damodaran_agent",
+        "order": 0,
+    },
 }
-print(type(ANALYST_CONFIG))
+print(f"type(ANALYST_CONFIG) {type(ANALYST_CONFIG)}")
+
 ANALYST_ORDER = [(config["display_name"], key) for key, config in sorted(ANALYST_CONFIG.items(), key=lambda x: x[1]["order"])]
-print(type(ANALYST_ORDER))
+print(f"type(ANALYST_ORDER)  {type(ANALYST_ORDER)}")
+print(ANALYST_ORDER)
 
 '''字典的items()方法返回 dict_items 视图对象（view object），属于可迭代对象（实现了__iter__）。每个元素是 严格二元组（tuple），形式为 (key, value)'''
 itms = ANALYST_CONFIG.items()
-print(type(itms)) # <class 'dict_items'>
+print(f"type(itms)  {type(itms)}") # <class 'dict_items'>
 print(itms)
+
+# 此处的 x 是二元组，x[1]是元组的第二个元素，对当前数据即为一个字典，x[1]["order"] 是字典的order属性值
 sortitem = sorted(itms,key=lambda x: x[1]["order"])
-print(type(sortitem)) # <class 'list'> 元素类型为列表，该列表中的子元素是包含两个子元素的元组
+print(f"type(sortitem)  {type(sortitem)}") # <class 'list'> 元素类型为列表，该列表中的子元素是包含两个子元素的元组
 print(sortitem)
+
 # 遍历元素
 for v1,v2 in sortitem:
     print(f"v1: {v1}")

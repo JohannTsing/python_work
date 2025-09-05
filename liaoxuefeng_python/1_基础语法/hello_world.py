@@ -1,6 +1,34 @@
 # Python基础语法示例
 print("Hello, World!")  # 打印输出
 
+# 字符串转义
+greet = "Hi, I'm \"OK\"! \n"
+print(greet)
+
+# 如果希望保留原始字符串（raw_string），可以在字符串前方添加r
+greet = r"I'm \"OK\"! \n"
+print(greet)
+path = r'C:\Users\name\data.txt'
+print(path)
+path = 'C:\\Users\\name\\data.txt'
+print(path)
+path = 'C:/Users/name/data.txt'
+print(path)
+
+# 多行字符串
+# 不保留换行
+long_string = (
+    "这是一个非常长的字符串，它需要"
+    "被分成多行书写，Python会自动"
+    "将这些字符串连接在一起"
+)
+print(long_string)
+# 保留换行
+long_string = """这是一个非常长的字符串，
+它需要被分成多行书写，
+Python会保留这些换行符"""
+print(long_string)
+
 # 变量和数据类型
 name = "Python初学者"
 age = 20
